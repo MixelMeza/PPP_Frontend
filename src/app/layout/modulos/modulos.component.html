@@ -1,0 +1,23 @@
+<div class="p-d-flex p-flex-row h-full">
+  <!-- Sidebar -->
+  <div class="sidebar p-d-flex p-flex-column p-ai-center p-p-3 p-shadow-3">
+    <img [src]="profile.profilePicture" alt="Profile picture of {{ profile.name }}" class="p-mb-3" style="border-radius: 50%; width: 100px; height: 100px;">
+    <h2 class="p-text-center">{{ profile.name | uppercase }}</h2>
+    <button pButton type="button" label="CERRAR SESIÓN" class="p-button-warning p-mt-3"></button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content p-flex-1 p-p-4">
+    <h1>Hola {{ profile.name.split(' ')[0] }} 👋</h1>
+
+    <!-- Card Container -->
+    <div class="p-grid p-dir-row">
+      <div *ngFor="let module of modules" class="p-col-12 p-md-3 p-p-2">
+        <p-card header="{{ module.title }}" class="p-shadow-3">
+          <img [src]="module.imgUrl" alt="Module image" class="p-mb-3" style="width: 150px; height: 150px;">
+          <button pButton type="button" label="{{ module.title }}" class="p-button-warning"></button>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>

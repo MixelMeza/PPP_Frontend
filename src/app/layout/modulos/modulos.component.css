@@ -1,0 +1,10 @@
+.sidebar {
+  background: linear-gradient(to bottom, #0a3d91, #0a3d91);
+  color: white;
+  width: 20%;
+}
+
+.main-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
