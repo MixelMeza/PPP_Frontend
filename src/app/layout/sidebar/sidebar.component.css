@@ -1,0 +1,53 @@
+.sidebar-container {
+  width: 30vh; /* Equivalente a w-64 */
+  background-color: #ffffff; /* Equivalente a bg-white */
+  border-right: 1px solid #e5e7eb; /* Border color */
+
+  display: flex;
+  flex-direction: column;
+  height: 100%px;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem; /* Padding */
+  border-bottom: 1px solid #e5e7eb; /* Bottom border */
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.sidebar-item:hover {
+  background-color: #e1eefc; /* Hover background */
+}
+
+
+.sidebar-text {
+  margin-left: 1rem;
+  color: #1e3a8a; /* Text color */
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds "..." for overflow text */
+  white-space: nowrap;
+  max-width: 80%; /* Limits the width of the text */
+}
+
+/* Separates the "Cerrar Sesión" item */
+.sidebar-item.logout {
+  margin-top: 20.78rem; /* Add space above "Cerrar Sesión" */
+  border-top: 1px solid #e5e7eb; /* Top border for separation */
+  border-bottom: none; /* Removes bottom border */
+}
+
+.sidebar-icon {
+  color: #1e3a8a; /* Text color */
+  font-size: 1.25rem; /* Icon size */
+}

@@ -1,0 +1,9 @@
+img.perfil {
+  border-radius: 50%;
+}
+.logo{
+background-image: url('../../image/logo.png');
+height: 55px;
+width: 125.4px;
+background-size: cover;
+}
