@@ -1,10 +1,110 @@
+
+
+.h-full {
+  height: 100vh;
+}
+
 .sidebar {
-  background: linear-gradient(to bottom, #0a3d91, #0a3d91);
+  background: linear-gradient(to bottom, #001C48, #003EA0);
   color: white;
-  width: 20%;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  min-width: 320px;
+  max-width: 320PX;
+}
+.logo{
+  background-image: url('../../image/logo.png');
+  height: 85px;
+  width: 193px;
+  background-size: cover;
+  margin-bottom: 200px;
+  margin-top: 40px;
+  }
+
+h2{
+  font-size: 18px;
 }
 
 .main-content h1 {
   font-size: 24px;
+  margin-top: 50px;
   margin-bottom: 20px;
+  margin-left: 70px;
 }
+/* Contenedor para el grid de módulos */
+.module-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 63px;
+  padding: 50px;
+}
+
+.module-card {
+  width: 250px; /* Ancho fijo para cada tarjeta */
+  height: 250px;
+  position: relative;
+  border-radius: 50px;
+  transition: transform 0.2s, box-shadow 0.2s; /* Transición para suavizar el efecto */
+}
+
+/* Efecto hover en la tarjeta */
+.module-card:hover {
+  transform: scale(1.05); /* Escala del 105% al pasar el cursor */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más profunda para el efecto hover */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  /* Hace que el contenedor sea el contexto para posicionar el título */
+  width: 250px; /* Ancho completo de la tarjeta */
+  height: 250px; /* Altura ajustable */
+  padding: 10px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  cursor: pointer;
+}
+
+/* Contenedor de la imagen */
+.image-wrapper {
+  width: 200px;
+  height: 200px;
+}
+
+/* Imagen */
+.module-image {
+  width: 200px;
+  height: 200px;
+  background-size: cover; /* Asegura que la imagen cubra el área del contenedor */
+}
+
+/* Título con un ancho mayor que la imagen */
+.module-title {
+  position: absolute; /* Posiciona el título fuera del contenedor de la imagen */
+  bottom: -10px; /* Lo coloca debajo de la imagen */
+  left: 0px; /* Desplaza el título a la izquierda */
+  width: 250px; /* Ancho mayor que el contenedor de la imagen */
+  background-color: #E7A52E;
+  color: black;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border-top: 2px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  border-radius: 40px;
+}
+
+.background-solicitar-practicas {
+  background-image: url('../../image/file.png');
+}
+.background-mis-ppp {
+   background-image: url('../../image/file2.png');
+}
+.background-configuracion {
+  background-image: url('../../image/file3.png');
+}
+

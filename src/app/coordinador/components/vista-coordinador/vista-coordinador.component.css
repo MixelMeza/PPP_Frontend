@@ -1,0 +1,32 @@
+/* Configura el contenedor principal para ocupar toda la altura de la pantalla */
+.todo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Define la altura fija del header */
+.header {
+  flex: 0 0 auto; /* Evita que el header se expanda */
+  height: 83px; /* Ajusta la altura del header según tu preferencia */
+}
+
+/* Configura el contenedor principal para usar flex horizontalmente */
+.full {
+  display: flex;
+  flex: 1 1 auto; /* Permite que este contenedor ocupe el resto del espacio disponible */
+}
+
+/* Define el sidebar con ancho fijo */
+.sidebar {
+  width: 282.5px; /* Ancho fijo del sidebar */
+  flex: 0 0 auto; /* Evita que el sidebar se expanda */
+}
+
+/* Permite que el contenido ocupe el espacio restante */
+.content {
+  flex: 1 1 auto;
+  overflow-y: auto; /* Agrega scroll si el contenido es muy largo */
+  padding: 20px; /* Opcional: agrega un padding para dar espacio al contenido */
+}
+

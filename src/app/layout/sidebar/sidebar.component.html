@@ -1,19 +1,19 @@
 <div class="sidebar-container">
   <ul class="sidebar-list">
-    <!-- Bucle para elementos principales del sidebar -->
-    <li
-      class="sidebar-item"
-      *ngFor="let item of items"
-      [routerLink]="[item.route]"
-    >
-      <i [class]="item.icon + ' sidebar-icon'"></i>
-      <span class="sidebar-text">{{ item.label }}</span>
-    </li>
+    <!-- Contenedor para los módulos -->
+    <div>
+      <li class="sidebar-item" *ngFor="let item of items" [routerLink]="[item.route]" routerLinkActive="active-link">
+        <i [class]="item.icon + ' sidebar-icon'"></i>
+        <span class="sidebar-text">{{ item.label }}</span>
+      </li>
+    </div>
 
-    <!-- Elemento independiente para "Cerrar Sesión" -->
-    <li class="sidebar-item logout" >
-      <i class="fas fa-sign-out-alt sidebar-icon"  ></i>
-      <span class="sidebar-text">Cerrar Sesión</span>
-    </li>
+    <!-- Elemento para "Cerrar Sesión" fijo en la parte inferior -->
+    <div>
+      <li class="sidebar-item logout">
+        <i class="fas fa-sign-out-alt sidebar-icon"></i>
+        <span class="sidebar-text">Cerrar Sesión</span>
+      </li>
+    </div>
   </ul>
 </div>
