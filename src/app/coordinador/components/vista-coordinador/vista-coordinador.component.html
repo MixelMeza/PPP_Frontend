@@ -1,15 +1,15 @@
-<div class="todo">
-
+<div class="todo flex flex-column">
   <div class="header">
     <app-header></app-header>
   </div>
 
-  <div class="full">
-    <div>
+  <div class="full flex">
+    <div class="sidebar">
       <app-sidebar></app-sidebar>
     </div>
-    <div class="content">
+    <div class="content"><p>
+      <router-outlet />
+    </p>
     </div>
   </div>
-
 </div>

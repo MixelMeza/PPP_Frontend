@@ -1,11 +1,11 @@
 .sidebar-container {
-  width: 30vh; /* Equivalente a w-64 */
-  background-color: #ffffff; /* Equivalente a bg-white */
-  border-right: 1px solid #e5e7eb; /* Border color */
-
+  width: 30vh; /* Ancho fijo del sidebar */
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  min-width: 282.5px;
   display: flex;
   flex-direction: column;
-  height: 100%px;
+  height: calc(100vh - 83px); /* Ocupa toda la altura de la ventana */
 }
 
 .sidebar-list {
@@ -13,41 +13,58 @@
   padding: 0;
   margin: 0;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye elementos en la columna */
 }
 
 .sidebar-item {
   display: flex;
   align-items: center;
-  padding: 1rem; /* Padding */
-  border-bottom: 1px solid #e5e7eb; /* Bottom border */
+  padding: 20px 16px; /* Espaciado de los elementos */
+  border-bottom: 1px solid #e5e7eb;
   cursor: pointer;
   transition: background-color 0.2s;
   white-space: nowrap;
 }
 
 .sidebar-item:hover {
-  background-color: #e1eefc; /* Hover background */
+  background-color: #e1eefc;
 }
-
 
 .sidebar-text {
   margin-left: 1rem;
-  color: #1e3a8a; /* Text color */
+  color: #1e3a8a;
   font-size: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis; /* Adds "..." for overflow text */
+  text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 80%; /* Limits the width of the text */
+  max-width: 80%;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
 }
 
-/* Separates the "Cerrar Sesión" item */
 .sidebar-item.logout {
-  margin-top: 20.78rem; /* Add space above "Cerrar Sesión" */
-  border-top: 1px solid #e5e7eb; /* Top border for separation */
-  border-bottom: none; /* Removes bottom border */
+  border-top: 1px solid #e5e7eb;
+  border-bottom: none;
 }
 
 .sidebar-icon {
-  color: #1e3a8a; /* Text color */
-  font-size: 1.25rem; /* Icon size */
+  color: #1e3a8a;
+  font-size: 1.25rem;
+}
+
+
+/* Clase para el link activo */
+.active-link {
+  background-color: #8ab1df; /* Color de fondo suave para el estado activo */
+  color: #1a4d8f; /* Color de texto un poco más oscuro */
+}
+
+/* Estilos específicos para el texto e ícono en el estado activo */
+.active-link .sidebar-icon {
+  color: #1a4d8f; /* Cambia el color del icono si está activo */
+}
+
+.active-link .sidebar-text {
+  font-weight: 700; /* Negrita para el texto activo */
 }
