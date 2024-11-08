@@ -3,16 +3,16 @@
   <div class="sidebar flex" style="width: 320px; height: 945.4px;">
     <div class="logo"></div>
 
-      <img [src]="profile.profilePicture" alt="Profile picture of {{ profile.name }}" class="mb-3  align-items-center" style="border-radius: 50%; width: 150px; height: 150px;">
-      <h2 class="text-center">{{ profile.name | uppercase }} {{ profile.middleName | uppercase }}<br> {{ profile.lastName | uppercase }}</h2>
-      <button pButton type="button" label="CERRAR SESIÓN" class="p-button-warning "></button>
+      <img [src]="profile.profilePicture" alt="Profile picture of {{ usuario?.persona?.nombre }}" class="mb-3  align-items-center" style="border-radius: 50%; width: 150px; height: 150px;">
+      <h2 class="text-center">{{ usuario?.persona?.nombre }}<br> {{ usuario?.persona?.apellido}}</h2>
+      <button pButton type="button" label="CERRAR SESIÓN" class="p-button-warning " (click)="logout()"></button>
 
 
   </div>
 
   <!-- Main Content -->
   <div class="main-content">
-    <h1>Hola {{ profile.name}} {{profile.lastName}} 👋</h1>
+    <h1>Hola {{ usuario?.persona?.nombre}} {{usuario?.persona?.apellido}}  👋</h1>
 
     <div class="module-container">
 

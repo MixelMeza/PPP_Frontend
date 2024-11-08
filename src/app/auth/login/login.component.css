@@ -96,6 +96,23 @@ input{
     outline: none;
     color: white;
 }
+
+::ng-deep .custom-password .p-inputtext {
+  background: transparent !important;
+  border-bottom: solid 2px white !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  margin-bottom: 5px !important;
+  padding: 12px 15px !important;
+  margin: 8px 0px !important;
+  width: 248px !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  color: white !important;
+  font-size: smaller;
+}
+
 a{
     color: gray;
     font-size: 4px;

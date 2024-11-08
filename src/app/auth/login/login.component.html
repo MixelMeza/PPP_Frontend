@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css">
 <div class="body">
+
   <div class="container" id="main" [ngClass]="{'right-panel-active': modeSecundary}">
     <div class="sign-up">
         <form action="">
@@ -32,13 +33,14 @@
         </form>
     </div>
     <div class="sign-in">
-        <form action="#">
+        <form (ngSubmit)="login()">
             <div class="logito">
 
             </div>
             <p>Ingresa tu usuario y contraseña</p>
-            <input type="email" name="email" placeholder="Email" required="">
-            <input type="password" name="pwsd" placeholder="Password" required="">
+            <input type="text" name="usuario" placeholder="Usuario" [(ngModel)]="usuario"  required>
+            <p-password [(ngModel)]="contrasenia" [toggleMask]="true" name="contrasenia" class="custom-password" placeholder="Contraseña" [feedback]="false"/>
+        <p-toast />
             <button type="submit">Inicia Sesión</button>
         </form>
     </div>
