@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 .h-full {
   height: 100vh;
@@ -36,7 +37,7 @@ h2{
 .module-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 63px;
+  gap: 58px;
   padding: 50px;
 }
 
@@ -104,7 +105,42 @@ h2{
 .background-mis-ppp {
    background-image: url('../../image/file2.png');
 }
-.background-configuracion {
-  background-image: url('../../image/file3.png');
+
+
+.background-validar-solicitud {
+  background-image: url('../../image/file.png');
+  background-size: cover;
+  background-position: center;
 }
+
+.background-ppp {
+  background-image: url('../../image/ppp.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-insercion {
+  background-image: url('../../image/insercion.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-proyeccion-social {
+  background-image: url('../../image/proyeccion-social.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-reportes {
+  background-image: url('../../image/reportes.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-configuracion {
+  background-image: url('../../image/configuracion.png');
+  background-size: cover;
+  background-position: center;
+}
+
 

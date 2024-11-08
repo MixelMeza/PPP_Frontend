@@ -8,6 +8,15 @@
   height: calc(100vh - 83px); /* Ocupa toda la altura de la ventana */
 }
 
+.icon-svg {
+  width: 24px; /* Ajusta el tamaño según sea necesario */
+  height: 24px;
+  background-image: url('../../image/clipboard.svg'); /* Ruta del archivo SVG */
+  background-size: contain; /* Ajusta el tamaño del SVG dentro del elemento */
+  background-repeat: no-repeat; /* Evita que el SVG se repita */
+  display: inline-block; /* Asegura que el ícono se comporte como un elemento en línea */
+}
+
 .sidebar-list {
   list-style: none;
   padding: 0;
@@ -38,7 +47,8 @@
   font-size: 1rem;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 80%;
+  overflow: hidden;
+  max-width: 100%;
   font-weight: 600;
   font-family: 'Raleway', sans-serif;
 }

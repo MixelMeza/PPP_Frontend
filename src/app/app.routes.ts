@@ -9,6 +9,7 @@ import { SupervisoresEmpresarialesComponent } from './coordinador/components/sup
 import { DocumentosComponent } from './coordinador/components/documentos/documentos.component';
 import { PeriodoComponent } from './coordinador/components/periodo/periodo.component';
 import { InformeComponent } from './coordinador/components/informe/informe.component';
+import { ValidarSolicitudesComponent } from './coordinador/components/validar-solicitudes/validar-solicitudes.component';
 
 export const routes: Routes = [
   {
@@ -18,51 +19,209 @@ export const routes: Routes = [
   },
   {
     path: 'modulos',
-    component:ModulosComponent,
+    component: ModulosComponent,
     title: 'PracWay'
   },
-
+// practicas-estudiantes-coordinador
   {
     path: 'modulos/practicas',
-    component:VistaCoordinadorComponent,
+    component: VistaCoordinadorComponent,
     title: 'PracWay',
     children: [
       {
         path: 'inicio',
-        component:InicioComponent,
+        component: InicioComponent,
         title: 'PracWay'
       },
       {
         path: 'evaluaciones',
-        component:EvaluacionesComponent,
+        component: EvaluacionesComponent,
         title: 'PracWay'
       },
       {
         path: 'supervisores-academicos',
-        component:SupervisoresAcademicosComponent,
+        component: SupervisoresAcademicosComponent,
         title: 'PracWay'
       },
       {
         path: 'supervisores-empresariales',
-        component:SupervisoresEmpresarialesComponent,
+        component: SupervisoresEmpresarialesComponent,
         title: 'PracWay'
       },
       {
         path: 'documentos',
-        component:DocumentosComponent,
+        component: DocumentosComponent,
         title: 'PracWay'
       },
       {
         path: 'periodo-ppp',
-        component:PeriodoComponent,
+        component: PeriodoComponent,
         title: 'PracWay'
       },
       {
         path: 'informe-ppp',
-        component:InformeComponent,
+        component: InformeComponent,
+        title: 'PracWay'
+      }
+    ]
+  },
+  // solicitudes-estudiantes-coordinador
+  {
+    path: 'modulos/solicitudes',
+    component: VistaCoordinadorComponent,
+    title: 'PracWay',
+    children: [
+      {
+        path: 'inicio',
+        component: InicioComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'validar-solicitudes',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      }
+    ]
+  },
+  // insercion-de-datos-coordinador
+  {
+    path: 'modulos/insercion',
+    component: VistaCoordinadorComponent,
+    title: 'PracWay',
+    children: [
+      {
+        path: 'empresa',
+        component: InicioComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'representante',
+        component: InicioComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'estudiante',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'supervisor-academico',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'supervisor-empresarial',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'tipo',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'ppp',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      }
+    ]
+  },
+  // proyeccion-social-coordinador
+  {
+    path: 'modulos/proyeccion-social',
+    component: VistaCoordinadorComponent,
+    title: 'PracWay',
+    children: [
+      {
+        path: 'inicio',
+        component: InicioComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'horas-ps',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      }
+    ]
+  },
+  // reportes-coordinador
+  {
+    path: 'modulos/reportes',
+    component: VistaCoordinadorComponent,
+    title: 'PracWay',
+    children: [
+      {
+        path: 'inicio',
+        component: InicioComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'reporte1',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      }
+    ]
+  },
+  // configuracion-global
+  {
+    path: 'modulos/configuracion',
+    component: VistaCoordinadorComponent,
+    title: 'PracWay',
+    children: [
+      {
+        path: 'inicio',
+        component: InicioComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'cambiar-contraseña',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'informacion',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      }
+    ]
+  },
+  // solicitudes-estudiante
+  {
+    path: 'modulos/mis-solicitudes',
+    component: VistaCoordinadorComponent,
+    title: 'PracWay',
+    children: [
+      {
+        path: 'inicio',
+        component: InicioComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'solicitudes',
+        component: ValidarSolicitudesComponent,
+        title: 'PracWay'
+      }
+    ]
+  },
+  // practicas-estudiante
+  {
+    path: 'modulos/mis-practicas',
+    component: VistaCoordinadorComponent,
+    title: 'PracWay',
+    children: [
+      {
+        path: 'inicio',
+        component: InicioComponent,
+        title: 'PracWay'
+      },
+      {
+        path: 'practicas',
+        component: ValidarSolicitudesComponent,
         title: 'PracWay'
       }
     ]
   }
+
+
 
 ];

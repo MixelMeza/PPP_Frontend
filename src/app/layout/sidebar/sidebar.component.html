@@ -2,14 +2,14 @@
   <ul class="sidebar-list">
     <!-- Contenedor para los módulos -->
     <div>
-      <li class="sidebar-item" *ngFor="let item of items" [routerLink]="[item.route]" routerLinkActive="active-link">
+      <li class="sidebar-item" *ngFor="let item of sidebarItems" [pTooltip]="item.label"  [routerLink]="[item.route]" routerLinkActive="active-link">
         <i [class]="item.icon + ' sidebar-icon'"></i>
         <span class="sidebar-text">{{ item.label }}</span>
       </li>
     </div>
 
     <!-- Elemento para "Cerrar Sesión" fijo en la parte inferior -->
-    <div>
+    <div (click)="logout()">
       <li class="sidebar-item logout">
         <i class="fas fa-sign-out-alt sidebar-icon"></i>
         <span class="sidebar-text">Cerrar Sesión</span>
