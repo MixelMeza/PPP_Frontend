@@ -1,9 +1,11 @@
 export class Rol {
     id: number;
-    nombre: string;
+    rol: string;
+    estado: string;
 
-    constructor(id: number = 0, nombre: string = '') {
+    constructor(id: number = 0, rol: string = '', estado: string = '') {
         this.id = id;
-        this.nombre = nombre;
+        this.rol = rol;
+        this.estado = estado;
     }
 }
